@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="IRIS Admin Navigator: administration portal for InterSystems IRIS management APIs.">
+  <title>IRIS Admin Navigator</title><link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">IA</span><div><strong>IRIS Admin</strong><small>Navigator</small></div></div>
+      <nav aria-label="Primary navigation">
+        <button class="nav-item active" data-view="overview"><span>◈</span> Overview</button>
+        <button class="nav-item" data-view="security"><span>◉</span> Security</button>
+        <button class="nav-item" data-view="operations"><span>▣</span> Operations</button>
+        <button class="nav-item" data-view="system"><span>⌘</span> System</button>
+        <button class="nav-item" data-view="observability"><span>◌</span> Logs &amp; Insights</button>
+        <button class="nav-item" data-view="explorer"><span>⌁</span> API Explorer</button>
+      </nav>
+      <div class="sidebar-foot"><span class="status-dot"></span><span id="session-label">Not connected</span></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow">INTERSYSTEMS IRIS MANAGEMENT</p><h1 id="page-title">Overview</h1></div><div class="top-actions"><span id="server-chip" class="chip muted">No server</span><button id="logout" class="button ghost hidden">Log out</button><button id="open-login" class="button primary">Connect</button></div></header>
+      <div id="notice" class="notice hidden" role="status"></div><section id="view" aria-live="polite"></section>
+    </main>
+  </div>
+  <dialog id="login-dialog"><form id="login-form" method="dialog" class="login-card"><button type="button" class="dialog-close" id="close-login" aria-label="Close">×</button><p class="eyebrow">SECURE SESSION</p><h2>Connect to IRIS</h2><p class="muted-text">Credentials are sent only to the local <code>/api/admin/login</code> endpoint and tokens stay in this browser session.</p><label>Username<input name="user" autocomplete="username" required></label><label>Password<input name="password" type="password" autocomplete="current-password" required></label><label>Escalation role <span class="optional">optional</span><input name="role" placeholder="e.g. %Manager"></label><button class="button primary wide" type="submit">Connect securely</button></form></dialog>
+  <script src="js/app.js"></script>
+</body>
+</html>
