@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="iris-admin-navigator.ZPM">
+    <Module>
+      <Name>iris-admin-navigator</Name>
+      <Version>0.1.0</Version>
+      <Description>Focused administration portal for InterSystems IRIS management APIs</Description>
+      <Keywords>IRIS,admin,management-api,OpenAPI,REST</Keywords>
+      <Packaging>module</Packaging>
+      <CSPApplication CookiePath="/csp/irismi/" DefaultTimeout="900" DeployPath="${cspdir}/irismi" PasswordAuthEnabled="0" Recurse="1" ServeFiles="1" ServeFilesTimeout="3600" SourcePath="/web" UnauthenticatedEnabled="1" Url="/csp/irismi" UseSessionCookie="2"/>
+    </Module>
+  </Document>
+</Export>
